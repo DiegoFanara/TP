@@ -1,0 +1,36 @@
+body{
+    font-family: fantasy;
+    background-color: mediumblue;
+}
+.container{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: darkgray;
+}
+
+#taskInput{
+ color: red;
+ background-color: mediumblue;
+ font-style: normal;
+}
+
+#taskInput::placeholder{
+    color: red;
+}
+
+#taskList{
+    color: black;
+}
+
+li{
+    color: black;
+}
+
+button{
+    color: red;
+    background-color: mediumblue;
+}
+
