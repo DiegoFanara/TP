@@ -17,43 +17,36 @@ addTaskBtn.addEventListener("click", addTask);
 
 function addTask() {
 
- const taskText = taskInput.value.trim();
+   const taskText = taskInput.value.trim();
 
- if (taskText !==""){
+   if (taskText !==""){
+      const listItem = document.createElement("li");
+      listItem.textContent = taskText;
+      taskList.appendChild(listItem);
+      taskInput.value = "";
 
-    const listItem = document.createElement("li");
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Supprimer";
+      listItem.appendChild(deleteBtn);
+      deleteBtn.addEventListener("click", () => {
+      listItem.remove();
+      });
 
-    listItem.textContent = taskText;
+      const buttonModif = document.crerateElement("button");
+      buttonModif.textContent = "Modifier";
+      listItem.appendChild(buttonModif);
+      buttonModif.addEventListener("click", () => {
+      const newTaskText = prompt("Modifier la tâches...", taskText.nodeValue);
+         if(newTaskText !== null && newTaskText.trim() !== ""){
+            taskText.nodeValue = newTaskText.trim();
+         }
+      });
 
-    taskList.appendChild(listItem);
+   }else{
+      alert("Veuillez entrer une tâche valide.");
+   }
 
-    taskInput.value = "";
+   localStorage.setItem(task.concat(i), taskText);
+   i++;
 
-    const deleteBtn = document.createElement("button");
-
-    deleteBtn.textContent = "Supprimer";
-
-    // La méthode JavaScript appendChild() est utilisée pour insérer un nouveau noeud ou repositionner un
-
-    //noeud existant en tant que dernier enfant d'un noeud parent particulier.
-
-    listItem.appendChild(deleteBtn);
-
-    deleteBtn.addEventListener("click", () => {
-
-    listItem.remove();
-
- });
-
- }else{
-
-    alert("Veuillez entrer une tâche valide.");
-
- 
-
- }
-
- localStorage.setItem(task.concat(i), taskText);
- i++;
-
- }
+}
