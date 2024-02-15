@@ -36,7 +36,7 @@ function addTask() {
       buttonModif.textContent = "Modifier";
       listItem.appendChild(buttonModif);
       buttonModif.addEventListener("click", () => {
-      const newTaskText = prompt("Modifier la tâches...", taskText.nodeValue);
+         const newTaskText = prompt("Modifier la tâches...", taskText.nodeValue);
          if(newTaskText !== null && newTaskText.trim() !== ""){
             taskText.nodeValue = newTaskText.trim();
          }
