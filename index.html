@@ -21,10 +21,10 @@
         <p>Veuillez remplir ce formulaire pour créer un compte.</p>
         <hr>
         <label for="email"><b>E-mail</b></label>
-        <input type="text" placeholder="Entrez votre e-mail" name="email" required>
+        <input id="1" type="text" placeholder="Entrez votre e-mail" name="email" required>
 
         <label for="psw"><b>Mot de passe</b></label>
-        <input type="password" placeholder="Entrer le mot de passe" name="psw" required>
+        <input id="2"  type="password" placeholder="Entrer le mot de passe" name="psw" required>
 
         <label for="psw-repeat"><b>Répéter le mot de passe</b></label>
         <input type="password" placeholder="Répéter le mot de passe" name="psw-repeat" required>
@@ -37,7 +37,7 @@
 
         <div class="clearfix">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">S'inscrire</button>
+            <button type="submit" class="signupbtn" onclick="regis(event)">S'inscrire</button>
         </div>
         </div>
     </form>
@@ -56,15 +56,15 @@
 
         <div class="container">
         <label for="uname"><b>Nom d'utilisateur</b></label>
-        <input type="text" placeholder="Saisissez votre nom d'utilisateur" name="uname" required>
+        <input  id="3" type="text" placeholder="Saisissez votre nom d'utilisateur" name="uname" required>
         <label for="psw"><b>Mot de passe</b></label>
-        <input type="password" placeholder="Entrer le mot de passe" name="psw" required>
+        <input id="4" type="password" placeholder="Entrer le mot de passe" name="psw" required>
         <!-- <a href="accueil.html">
             <button type="submit" onclick="window.location.href==accueil.html">Login</button>
         </a> -->
         </div>
 
-        <button id="sub" onclick="userInfo()">Se connecter</button>
+        <button id="sub" onclick="log(event)">Se connecter</button>
 
         <label>
             <input type="checkbox" checked="checked" name="remember"> Souviens-toi de moi
@@ -79,5 +79,6 @@
     </div>
 </div>
     <script src="./JavaScript/index.js"></script>
+
     </body>
 </html>

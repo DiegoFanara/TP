@@ -1,5 +1,5 @@
 #divParent{
-  background-color: #31b5ac;
+  background-color: #00FFFF;
   width: 400px;
   height: 400px;
   margin: auto;
@@ -23,10 +23,14 @@ input[type=text], input[type=password] {
 }
 
 #butInscription{
-  background-color: #c3cb20;
-  border-color: rgb(90, 80, 80);
+  background-color: #000fff;
+  border-color: red;
   border-style: solid;
   border-width: 3px;
+}
+
+#butInscription:hover{
+  background-color: red;
 }
 
 /* Add a background color when the inputs get focus */
@@ -37,7 +41,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color: 00FFFF;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -138,16 +142,20 @@ input[type=text], input[type=password] {
 }
 
 #butConnexion{
-  background-color: #8c9217;
-  border-color: rgb(90, 80, 80);
+  background-color: #000fff;
+  border-color: red;
   border-style: solid;
   border-width: 3px;
 }
 
+#butConnexion:hover{
+  background-color: red;
+}
+
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
-  color: white;
+  background-color: 00FFFF;
+  color: yellow;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -157,6 +165,7 @@ button {
 
 button:hover {
   opacity: 0.8;
+  background-color: red;
 }
 
 /* Extra styles for the cancel button */

@@ -8,13 +8,20 @@
         <link rel="stylesheet" target=_blank href="./CSS/style.css">
     </head>
 
+    <navbar class="navbar">
+        <h1>Taskify</h1>
+        <button onclick="filterTasks()">Filtrer les tâches</button>
+        <button onclick="showCategories()">Afficher les catégories</button>
+        <h1></h1>
+    </navbar>
+
     <body>
         <!-------------------------------------- Sidebar --------------------------------------->
         <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
             <button onclick="w3_close()">Close &times;</button>
-        <div id="div1"> <a href="#" class="w3-bar-item button">Groupe de tâches "1"</a></div>
-        <div id="div2"><a href="#" class="w3-bar-item button">Groupe de tâches "2"</a></div>
-        <div id="div3"><a href="#" class="w3-bar-item button">Groupe de tâches "3"</a></div>
+        <div id="div1"> <a href="#" class="w3-bar-item button">Application WEB</a></div>
+        <div id="div2"><a href="#" class="w3-bar-item button">Français</a></div>
+        <div id="div3"><a href="#" class="w3-bar-item button">Général</a></div>
         </div>
 
         <!-------------------------------------- Bouton de la barre latérale --------------------------------------->
@@ -34,7 +41,6 @@
             <ul id="taskList"></ul>
             <button id="clearAll">Effacer LocalStorage</button>
         </div>
-
 
         <script src="./JavaScript/script.js"></script>
     </body>
